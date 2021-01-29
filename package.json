@@ -1,0 +1,15 @@
+{
+  "name": "What-Music-Playing-Now-",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/noeulnight/What-Music-Playing-Now-.git",
+  "author": "noeulnight <noeulnight.mail@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "node-fetch": "^2.6.1",
+    "socket.io": "^3.1.0",
+    "socket.io-client": "^3.1.0"
+  }
+}
