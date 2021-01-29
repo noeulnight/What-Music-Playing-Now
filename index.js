@@ -19,7 +19,7 @@ async function music_data() {
   const query = await su.get(`http://${YTMD_IP}/query`).timeout({deadline:1000}).catch(() => { return { status:500 }})
   const queue = await su.get(`http://${YTMD_IP}/query/queue`).timeout({deadline:1000}).catch(() => { return { status:500 }})
   if (query.status === 500) return { status:500, msg:'Service Offline' }
-  return { query, queue }
+  return { query:JSON.parse(query.text), queue: JSON.parse(queue.text) }
 }
 
 srv.listen(PORT, () => console.log('http://localhost:' + PORT))
